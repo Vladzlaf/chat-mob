@@ -24,13 +24,11 @@ export const GradientWrapper: React.FC<GradientWrapperProps> = ({
 
   return (
     <LinearGradient
+
       colors={gradientColors ?? colors.gradientGreen}
       start={{x: 0, y: 0}}
       end={{x: 1, y: 1}}
-      style={[
-        styles.container,
-        Platform.OS === 'android' && {paddingTop: STATUSBAR_HEIGHT},
-      ]}>
+      >
       {children}
     </LinearGradient>
   );
